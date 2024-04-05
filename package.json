@@ -1,0 +1,22 @@
+{
+  "name": "iswhitetile",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PingHuskar/npm-iswhitetile.git"
+  },
+  "keywords": [
+    "chess",
+    "tile"
+  ],
+  "author": "Chadin Chaipornpisuth",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
