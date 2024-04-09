@@ -10,6 +10,19 @@ const toIndex = (tile) => {
     ];
 }
 
+const toCharCode = (tile) => {
+  return [
+    tile.slice(0, 1).toLowerCase().charCodeAt(),
+    tile.slice(1, 2).charCodeAt(),
+  ];
+};
+
+const IsValidTile = (tile) => {
+    if (!validCoor.test(tile)) return false;
+    const [f, r] = toCharCode(tile);
+    return (f >= 97) & (f <= 104) && (r >= 49) & (r <= 56);
+}
+
 const IsWhite = (tile) => {
     if (!validCoor.test(tile)) return undefined;
     const [f, r] = toIndex(tile);
@@ -29,10 +42,57 @@ const IsDiagonal = (tile1, tile2) => {
     return Math.abs(cx1 - cx2) == Math.abs(cy1 - cy2);
 }
 
+const KnightMoves = (dx, dy) => {
+    return [
+      [dx, dy],
+      [dx, -dy],
+      [-dx, dy],
+      [-dx, -dy],
+      [dy, dx],
+      [dy, -dx],
+      [-dy, dx],
+      [-dy, -dx],
+    ];
+}
+
+const LegalKnightMoves = (tile) => {
+    const validtile = IsValidTile(tile);
+    if (!validtile) return undefined
+    const [f, r] = toCharCode(tile);
+    const retArr = []
+    const moves = KnightMoves(2,1);
+    for (const move of moves) {
+        if (
+          IsValidTile(
+            `${String.fromCharCode(f + move[0])}${
+              String.fromCharCode(r + move[1]) 
+            }`
+          )
+        ) {
+          retArr.push(
+            `${String.fromCharCode(f + move[0])}${
+              String.fromCharCode(r + move[1])
+            }`
+          );
+        }
+    }
+    return retArr
+}
+
+const IsCorner = (tile) => {
+    if (!validCoor.test(tile)) return undefined;
+    return LegalKnightMoves(tile).length === 2;
+}
+
 module.exports = {
-    validCoor,
-    toIndex,
-    IsDiagonal,
-    IsWhite,
-    IsBlack,
+  validCoor,
+  toIndex,
+  toCharCode,
+  IsValidTile,
+  IsDiagonal,
+  IsWhite,
+  IsBlack,
+  KnightMoves,
+  LegalKnightMoves,
+  IsCorner,
 };
