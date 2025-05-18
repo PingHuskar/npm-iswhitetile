@@ -1,0 +1,10 @@
+export const validateCoor: RegExp;
+export function toIndex(coor: string): [number, number] | undefined;
+export function toCharCode(coor: string): [number, number] | undefined;
+export function IsValidTile(coor: string): boolean | undefined;
+export function IsWhite(coor: string): boolean | undefined;
+export function IsBlack(coor: string): boolean | undefined;
+export function IsDiagonal(from: string, to: string): boolean | undefined;
+export function KnightMoves(coor: string): string[] | undefined;
+export function LegalKnightMoves(coor: string): string[] | undefined;
+export function IsCorner(coor: string): boolean | undefined;

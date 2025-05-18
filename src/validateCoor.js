@@ -1,0 +1,1 @@
+export default /^[a-h][1-8]$/i;
