@@ -1,5 +1,5 @@
-import file from "./file";
-import rank from "./rank";
+import files from "./files";
+import ranks from "./ranks";
 import validateCoor from "./validateCoor"
 import toIndex from "./toIndex"
 import toCharCode from "./toCharCode"
@@ -12,8 +12,8 @@ import LegalKnightMoves from "./LegalKnightMoves"
 import IsCorner from "./IsCorner";
 
 export {
-    file,
-    rank,
+    files,
+    ranks,
     validateCoor,
     toIndex,
     toCharCode,

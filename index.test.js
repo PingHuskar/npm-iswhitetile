@@ -1,6 +1,9 @@
-import { IsWhite, toIndex, toCharCode, IsCorner } from "./" 
+import { IsWhite, toIndex, toCharCode, IsCorner, LegalKnightMoves } from "./"
+import files from "./src/files"
+import ranks from "./src/ranks"
+import knightMovesGrid from "./src/knightMovesGrid"
 
-test(`IsWhite`,() => {
+test(`IsWhite`, () => {
     expect(IsWhite("a1")).toBe(false);
     expect(IsWhite("a2")).toBe(true);
     expect(IsWhite("a3")).toBe(false);
@@ -88,11 +91,11 @@ test(`IsWhite`,() => {
 })
 
 test("toIndex", () => {
-    expect(toIndex("a5")).toStrictEqual([0,4])
+    expect(toIndex("a5")).toStrictEqual([0, 4])
 })
 
 test("toCharCode", () => {
-    expect(toCharCode("a5")).toStrictEqual([97,53])
+    expect(toCharCode("a5")).toStrictEqual([97, 53])
 })
 
 test("IsCorner", () => {
@@ -107,4 +110,13 @@ test("IsCorner", () => {
     expect(IsCorner("a5")).toBe(false)
 })
 
-
+test("LegalKnightMoves", () => {
+    for (const rank of ranks) {
+        for (const file of files) {
+            const pos = file + rank;
+            const [y, x] = toIndex(pos)
+            expect(LegalKnightMoves(pos).length).toBe(knightMovesGrid[y][x])
+        }
+    }
+}
+)

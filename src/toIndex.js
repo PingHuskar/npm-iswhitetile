@@ -1,11 +1,11 @@
-import file from "./file";
-import rank from "./rank";
+import files from "./files";
+import ranks from "./ranks";
 
 export default (tile) => {
     try {
         return [
-            file.indexOf(tile.slice(0, 1).toLowerCase()),
-            rank.indexOf(tile.slice(1, 2)),
+            files.indexOf(tile.slice(0, 1).toLowerCase()),
+            ranks.indexOf(tile.slice(1, 2)),
         ];
     } catch {
         return undefined
