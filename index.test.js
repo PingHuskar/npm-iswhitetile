@@ -1,4 +1,4 @@
-import { IsWhite, toIndex, toCharCode, IsCorner, LegalKnightMoves } from "./"
+import { IsWhite, toIndex, toCharCode, IsCorner, NumberOfLegalKnightMoves } from "./"
 import files from "./src/files"
 import ranks from "./src/ranks"
 import knightMovesGrid from "./src/knightMovesGrid"
@@ -110,12 +110,12 @@ test("IsCorner", () => {
     expect(IsCorner("a5")).toBe(false)
 })
 
-test("LegalKnightMoves", () => {
+test("NumberOfLegalKnightMoves", () => {
     for (const rank of ranks) {
         for (const file of files) {
             const pos = file + rank;
             const [y, x] = toIndex(pos)
-            expect(LegalKnightMoves(pos).length).toBe(knightMovesGrid[y][x])
+            expect(NumberOfLegalKnightMoves(pos)).toBe(knightMovesGrid[y][x])
         }
     }
 }

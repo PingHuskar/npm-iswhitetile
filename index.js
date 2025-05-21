@@ -1,4 +1,4 @@
-import { validateCoor, toIndex, toCharCode, KnightMoves, IsValidTile, IsWhite, IsBlack, IsDiagonal, LegalKnightMoves, IsCorner } from "./src"
+import { validateCoor, toIndex, toCharCode, KnightMoves, IsValidTile, IsWhite, IsBlack, IsDiagonal, LegalKnightMoves, IsCorner, NumberOfLegalKnightMoves } from "./src"
 
 export {
   validateCoor,
@@ -11,4 +11,5 @@ export {
   KnightMoves,
   LegalKnightMoves,
   IsCorner,
+  NumberOfLegalKnightMoves,
 }

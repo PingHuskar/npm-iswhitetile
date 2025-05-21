@@ -8,3 +8,4 @@ export function IsDiagonal(from: string, to: string): boolean | undefined;
 export function KnightMoves(coor: string): string[] | undefined;
 export function LegalKnightMoves(coor: string): string[] | undefined;
 export function IsCorner(coor: string): boolean | undefined;
+export function NumberOfLegalKnightMoves(coor: string): number | undefined;

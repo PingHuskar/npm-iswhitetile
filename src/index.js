@@ -10,6 +10,7 @@ import IsBlack from "./IsBlack"
 import IsDiagonal from "./IsDiagonal"
 import LegalKnightMoves from "./LegalKnightMoves"
 import IsCorner from "./IsCorner";
+import NumberOfLegalKnightMoves from "./NumberOfLegalKnightMoves";
 
 export {
     files,
@@ -24,4 +25,5 @@ export {
     IsDiagonal,
     LegalKnightMoves,
     IsCorner,
+    NumberOfLegalKnightMoves,
 }
