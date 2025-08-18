@@ -1,4 +1,19 @@
-import { validateCoor, toIndex, toCharCode, KnightMoves, IsValidTile, IsWhite, IsBlack, IsDiagonal, LegalKnightMoves, IsCorner, NumberOfLegalKnightMoves } from "./src"
+import {
+  validateCoor
+  , toIndex
+  , toCharCode
+  , KnightMoves
+  , IsValidTile
+  , IsWhite
+  , IsBlack
+  , IsDiagonal
+  , LegalKnightMoves
+  , IsCorner
+  , NumberOfLegalKnightMoves
+  , knightMovesGrid
+  , RandomTile
+  , RandomTiles
+} from "./src"
 
 export {
   validateCoor,
@@ -12,4 +27,7 @@ export {
   LegalKnightMoves,
   IsCorner,
   NumberOfLegalKnightMoves,
+  knightMovesGrid,
+  RandomTile,
+  RandomTiles,
 }

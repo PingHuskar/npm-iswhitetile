@@ -11,6 +11,9 @@ import IsDiagonal from "./IsDiagonal"
 import LegalKnightMoves from "./LegalKnightMoves"
 import IsCorner from "./IsCorner";
 import NumberOfLegalKnightMoves from "./NumberOfLegalKnightMoves";
+import knightMovesGrid from "./knightMovesGrid";
+import RandomTile from "./RandomTile";
+import RandomTiles from "./RandomTiles";
 
 export {
     files,
@@ -26,4 +29,7 @@ export {
     LegalKnightMoves,
     IsCorner,
     NumberOfLegalKnightMoves,
+    knightMovesGrid,
+    RandomTile,
+    RandomTiles,
 }
